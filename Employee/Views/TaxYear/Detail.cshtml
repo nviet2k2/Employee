@@ -1,0 +1,29 @@
+﻿@model TaxYearDetailViewModel
+
+<div class="col-md-12 grid-margin grid-margin-md-0">
+    <div class="card">
+        <div class="card-body">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class="breadcrumb-item"><a asp-action="Index">TaxYear List</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">TaxYear Details</li>
+                </ol>
+            </nav><br /><br />
+            <div class="wrap d-flex justify-content-md-start justify-content-sm-center flex-wrap">
+                
+                <div class="wrap align-content-center ml-5">
+                    <p class="font-weight-bold text-success" style="font-size:20px">@Model.YearOfTax</p>
+                   
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
